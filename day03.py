@@ -31,3 +31,20 @@ class Solution():
             return True
         else:
             return False
+        
+        
+
+        # 解法二，不使用字符串，直接利用数学计算
+# 难点是如何使用循环语句来将数值反转
+class Solution():
+    def isPalindrome(self, x):
+        if x < 0:
+            return False
+        # 采用临时变量作为判断循环终止的条件
+        x1 = x
+        palindrome = 0
+        while x1 > 0:
+            palindrome = palindrome * 10 + x1 % 10
+            x1 = x1 // 10
+        # 最后判断转换后的值与原来的值是否相等即可
+        return x == palindrome
