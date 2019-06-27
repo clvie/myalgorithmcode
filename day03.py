@@ -34,7 +34,7 @@ class Solution():
         
         
 
-        # 解法二，不使用字符串，直接利用数学计算
+# 解法二，不使用字符串，直接利用数学计算
 # 难点是如何使用循环语句来将数值反转
 class Solution():
     def isPalindrome(self, x):
