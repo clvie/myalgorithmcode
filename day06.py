@@ -32,6 +32,7 @@
 
 """
 # 写起来最快的一种思路，把正确的都替换掉，最后返回s == ""
+# 这种做法时间复杂度空间复杂度较高，每一次都得三种方式循环一遍
 class Solution():
     def isValid(self, s):
         while "{}" in s or "[]" in s or "()" in s:
