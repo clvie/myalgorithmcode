@@ -42,3 +42,24 @@ class Solution():
 
             s = s.replace("()", "")
         return s == ""
+
+    
+    
+    
+    
+# 重新找一种方式进行解决    
+# 利用栈这种数据结构进行操作，降低时间复杂度和空间复杂度
+# 将左括号压入栈中，左括号为键右括号为值进行匹配
+# 这种做法币官方的好理解一些
+class Solution():
+    def isValid(self, s):
+        stack = []
+        dict1 = {'[':']', '{':'}', '(':')'}
+        for i in range(len(s)):
+            if stack and stack[-1] in dict1 and s[i] == dict1[stack[-1]]:
+                # 如果正常匹配，将元素从栈中压出
+                stack.pop()
+            else:
+                stack.append(s[i])
+        # 如果正常匹配，最后栈中为空，所以not stack 会返回True，否则返回False
+        return not stack
