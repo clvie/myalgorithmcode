@@ -37,3 +37,8 @@ class Solution():
                 return s2[:i]
         # 只有一个元素的时候返回s1
         return s1
+    
+    
+    
+ #  还有其他方法值得探索
+# TODO
