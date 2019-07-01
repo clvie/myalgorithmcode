@@ -28,3 +28,37 @@ class Solution():
         
         
 # 时间复杂度O（m+n）    空间复杂度O（m+n）
+
+
+
+
+
+# 解法二，迭代，不是特别理解
+class Solution():
+    def mergeTwoLists(self, l1, l2):
+        # 先定义一个前节点，然后使用双指针
+        prehead = listNode(-1)
+        prev = prehead
+
+        while l1 or l2:
+            # 都不为空
+            if l1 and l2:
+                if l1.val < l2.val:
+                    prev.next = l1
+                    l1 = l1.next
+                else:
+                    prev.next = l2
+                    l2 = l2.next
+            # l1不为空
+            elif l1:
+                prev.next = l1
+            # l2 不为空
+            else:
+                prev.next = l2
+
+            prev = prev.next
+        return prehead.next
+    
+# 时间复杂度O(m+n)  空间复杂度O(1)
+
+# 都是看的官方解法
