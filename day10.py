@@ -21,7 +21,7 @@
 
 
 """
-# 使用字符串切片
+# 解法一：使用字符串切片
 class Solution():
     def strStr(self, haystack, needle):
         if not haystack and not needle:
@@ -31,3 +31,6 @@ class Solution():
                 return i
 
         return -1
+ # 最好成绩64ms，太耗时了
+    
+  
