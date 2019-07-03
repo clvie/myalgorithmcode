@@ -32,5 +32,11 @@ class Solution():
 
         return -1
  # 最好成绩64ms，太耗时了
+
+
+# 解法二：使用find这个内置函数，没技术含量
+class Solution():
+    def strStr(self, haystack, needle):
+        return haystack.find(needle)
     
   
