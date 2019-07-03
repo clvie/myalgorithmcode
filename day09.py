@@ -42,6 +42,8 @@ for (int i = 0; i < len; i++) {
 
 
 """
+
+# 跟第八天的题思路一样，使用双指针的方法进行操作
 class Solution():
     def removeElement(self, nums, val):
         if not nums:
@@ -51,5 +53,4 @@ class Solution():
             if nums[i] != val:
                 nums[j] = nums[i]
                 j += 1
-        print(nums)
         return j
