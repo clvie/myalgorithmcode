@@ -18,5 +18,8 @@
 class Solution():
     def maxSubArray(self, nums):
         for i in range(1, len(nums)):
+            # 该项与前面最大子序和的和，如果前面小于0就重新计算
             nums[i] = nums[i] + max(nums[i -1], 0)
         return max(nums)
+    
+# 对动态规划不熟悉，搞了半天才明白
