@@ -15,6 +15,7 @@
 
 
 """
+# 直接调用库函数
 class Solution():
     def lengthOfLastWord(self, s):
         # 使用split将字符串分割
