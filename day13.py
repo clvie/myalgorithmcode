@@ -22,3 +22,19 @@ class Solution():
         if not s:
             return 0
         return len(s[-1])
+
+    
+# 模仿java大佬写的
+class Solution():
+    def lengthOfLastWord(self, s):
+        end = len(s) - 1
+        if end == -1:
+            return 0
+        # 真正的结尾
+        while end >= 0 and s[end] == " ":
+            end -= 1
+        # 除去尾部空格后的结尾
+        end1= end
+        while end1 >= 0 and s[end1] != " ":
+            end1 -= 1
+        return end - end1
