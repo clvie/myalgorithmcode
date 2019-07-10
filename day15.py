@@ -41,3 +41,12 @@ class Solution():
         if su == 1:
             res = "1" + res
         return res
+    
+    
+    
+# 使用python内置语法
+class Solution():
+    def addBinary(self, a, b):
+        # 先将字符串转为二进制整型，然后以二进制形式输出
+        res = bin(int(a,2) + int(b,2))
+        return res[2:]
