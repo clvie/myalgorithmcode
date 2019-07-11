@@ -31,6 +31,7 @@ class Solution():
         right = x // 2
         # 当右边界大于左边界的时候进行计算中位数然后中位数平方与输入的值进行比较
         while left < right:
+            # 中点应该取为右中位数，取左中位数的时候会产生死循环
             mid = left + (right - left +1) // 2
             squr = mid * mid
             # 如果大，就把右边界缩小
