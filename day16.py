@@ -41,3 +41,17 @@ class Solution():
             else:
                 left = mid
         return left
+
+    
+    
+ # 解法二：牛顿迭代法（并不是很懂）
+class Solution():
+    def mySqrt(self, x):
+        if x == 0 or x == 1:
+            return x
+        cur = 1
+        while True:
+            pre = cur
+            cur = (cur + x/cur) / 2
+            if abs(cur - pre) < 1e-6:
+                return int(cur)
