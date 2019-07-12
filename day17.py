@@ -34,3 +34,6 @@ class Solution():
         for _ in range(n-1):
             a, b = a+b , a
         return a
+
+    
+    # 官方给出了大概5种解答
