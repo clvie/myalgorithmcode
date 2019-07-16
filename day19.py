@@ -36,5 +36,5 @@ class Solution():
                 p1 -= 1
             # 合并后的nums1往前走一位
             p -= 1
-        # 不懂
+        # nums1 循环结束但是nums2没结束，将nums2元素放在列表前面
         nums1[:p2 + 1] = nums2[:p2 + 1]
