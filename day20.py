@@ -49,3 +49,7 @@ class Solution():
             return False
         # 然后采用递归的方式
         return self.isSameTree(p.right, q.right) and self.isSameTree(p.left, q.left)
+
+
+
+# 官方的迭代解法用的python库函数，表示没看懂
