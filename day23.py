@@ -22,6 +22,8 @@
 
 
 """
+# 不会做，先抄的大佬的代码
+
 class Solution():
     def levelOrderBottom(self, root):
         # 结果列表
