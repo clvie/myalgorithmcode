@@ -27,14 +27,18 @@ class TreeNode():
         self.left = None
         self.right = None
 
-
+# 运行效率极差的一次
+# 还是老思路，使用递归暴力解题
 class Solution():
     def sortedArrayToBST(self, nums):
         if not nums:
             return None
         n = len(nums)
         mid = n // 2
+      # 确定中间值，作为根节点
         root = TreeNode(nums[mid])
+         # 确定左子节点
         root.left = self.sortedArrayToBST(nums[:mid])
+          # 确定右子节点
         root.right = self.sortedArrayToBST(nums[mid+1:])
         return root
