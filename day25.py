@@ -55,3 +55,6 @@ class Solution():
             return max(left, right)
         panduan(root)
         return self.flag
+
+    
+    # 还有一种自顶向下的操作，这种题思路很简单，就是写代码比较烦，直接抄了
