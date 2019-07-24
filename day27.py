@@ -28,7 +28,7 @@ class TreeNode:
         self.left = None
         self.right = None
 
-# 比较容易理解的一种思路
+# 比较容易理解的一种思路  递归
 class Solution():
     def hasPathSum(self, root, sum):
         if not root:
@@ -39,4 +39,18 @@ class Solution():
             root.left.val = root.val + root.left.val
         if root.right:
             root.right.val = root.val + root.right.val
+        return self.hasPathSum(root.left, sum) or self.hasPathSum(root.right, sum)
+      
+      
+      
+ # 官方解法：递归暴力破解
+class Solution():
+    def hasPathSum(self, root, sum):
+
+        if not root:
+            return False
+
+        sum -= root.val
+        if not root.left and not root.right:
+            return sum == 0
         return self.hasPathSum(root.left, sum) or self.hasPathSum(root.right, sum)
