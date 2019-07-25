@@ -31,7 +31,7 @@ class Solution():
         if numRows == 2:
             return [[1], [1,1]]
         else:
-            # 从第三列开始进行加法操作
+            # 从第三行开始进行加法操作
             res = self.generate(numRows - 1)
             tmp = [1]
             l = len(res[-1])
