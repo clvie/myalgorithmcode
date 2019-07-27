@@ -37,3 +37,4 @@ class Solution():
             elif  flag > max_profit:
                 max_profit = flag
         return max_profit
+# 这是特别耗时的一种解法，不知为什么，时间复杂度明明是O(N)
