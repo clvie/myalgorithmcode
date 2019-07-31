@@ -29,3 +29,18 @@ class Solution:
             except:
                 dict1[i] = 1
         return dict1.popitem()[0]
+
+    # 字典的第二种解法
+    class Solution:
+        def singleNumber(self, nums):
+
+            nums_dict = {}
+            for num in nums:
+                nums_dict[num] = nums_dict.get(num, 0) + 1
+
+            for key, val in nums_dict.items():
+                if val == 1:
+                    return key
+
+    # 利用异或运算
+    
