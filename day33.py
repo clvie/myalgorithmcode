@@ -43,4 +43,11 @@ class Solution:
                     return key
 
     # 利用异或运算
+    class Solution:
+        def singleNumber(self, nums):
+
+            a = 0
+            for i in nums:
+                a ^= i
+            return a
     
