@@ -61,3 +61,20 @@ class Solution(object):
             if fast == slow:
                 return True
         return False
+    
+    
+ # 思路二：利用集合这个容器存值，然后遍历判断下一个值是否在容器里面，感觉更快一点
+class Solution(object):
+    def hasCycle(self, head):
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+        rongqi = set()
+        p = head
+        while p:
+            rongqi.add(p)
+            if p.next in rongqi:
+                return True
+            p = p.next
+        return False
