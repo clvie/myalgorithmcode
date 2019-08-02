@@ -22,7 +22,8 @@ minStack.getMin();   --> 返回 -2.
 
 
 """
-
+# 使用两个栈，辅助栈只用来存储越来越小的值，最后取最小值的时候就取辅助栈的最后一个元素
+#  反正是抄来抄去
 
 class MinStack(object):
     def __init__(self):
