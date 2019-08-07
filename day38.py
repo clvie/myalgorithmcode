@@ -30,3 +30,16 @@ class Solution(object):
         counts = collections.Counter(nums)
         # 传入命名参数key，其为一个函数，用来指定取最大值的方法,即通过counts.get的方法找最大值
         return max(counts.keys(), key = counts.get)
+
+
+
+
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        # 先排序后找中位数，充分利用规则
+        nums.sort()
+        return nums[len(nums)//2]
