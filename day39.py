@@ -45,3 +45,22 @@ class Solution(object):
             # *表示乘号    ** 表示次方
             res += tmp*26**(n - 1 -i)
         return res
+
+    
+# 26进制转十进制
+# ord函数会将字符串转换ASCII码
+class Solution(object):
+    def titleToNumber(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        # 第二种思路
+        res = 0
+        tmp = 1
+        for i in s[::-1]:
+            res += (ord(i) - 64) * tmp
+            tmp *= 26
+        return res
+        
+    
