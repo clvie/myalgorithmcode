@@ -27,7 +27,7 @@
 
 """
 
-
+# 主要思路就是采用切片的方式，成批替换数组中的元素
 class Solution(object):
     def rotate(self, nums, k):
         """
