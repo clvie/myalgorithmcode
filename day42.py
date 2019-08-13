@@ -47,3 +47,24 @@ class Solution:
         return shi
 # bin()函数是讲整数转换成二进制字符串
 # int()函数是将二进制字符串转为十进制整型
+
+
+
+# 有大佬采用了移位算法表示没看懂
+
+class Solution:
+    # @param n, an integer
+    # @return an integer
+    def reverseBits(self, n):
+        res = 0
+        count = 32
+        
+        while count:
+            res <<= 1
+            # 取出 n 的最低位数加到 res 中
+            res += n&1
+            n >>= 1
+            count -= 1
+            
+        return int(bin(res), 2)
+
