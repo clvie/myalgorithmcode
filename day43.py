@@ -51,3 +51,20 @@ class Solution(object):
             if num == "1":
                 count += 1
         return count
+    
+    
+# 抄袭大佬写法  利用与运算，将n与1进行与运算
+class Solution(object):
+    def hammingWeight(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+
+        count = 0
+        while n:
+            count += n&1
+            # 左移一位
+            n >>= 1
+        return count
+
