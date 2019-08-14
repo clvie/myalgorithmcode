@@ -64,7 +64,7 @@ class Solution(object):
         count = 0
         while n:
             count += n&1
-            # 左移一位
+            # 右移一位
             n >>= 1
         return count
 
