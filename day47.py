@@ -22,7 +22,7 @@
 
 """
 
-
+# 使用集合去重，号称哈希表，相当于使用了内置算法，并不是很好
 class Solution(object):
     def containsDuplicate(self, nums):
         """
