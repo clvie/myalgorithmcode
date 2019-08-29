@@ -22,13 +22,14 @@
 
 """
 
-
+# 常规思路不断除以2
 class Solution(object):
     def isPowerOfTwo(self, n):
         """
         :type n: int
         :rtype: bool
         """
+        # 需要判断等于0 和 负数的情况
         if n <= 0:
             return False
         while n > 1:
