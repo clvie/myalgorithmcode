@@ -21,7 +21,7 @@
 
 """
 
-
+# 使用传说中的哈希散列表，也就是字典进行值的存储
 class Solution(object):
     def containsNearbyDuplicate(self, nums, k):
         """
