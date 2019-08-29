@@ -38,3 +38,14 @@ class Solution(object):
             else:
                 return False
         return True
+    
+    
+   # 采用位运算，二进制，如果是2的倍数只有最高位是1
+   class Solution(object):
+    def isPowerOfTwo(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        if n > 0 and n&(n-1) ==0:
+            return True
