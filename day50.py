@@ -33,3 +33,32 @@ class Solution(object):
         if s != t:
             return False
         return True
+    
+   # 找到了一种比较高效的解法，利用字典这种容器进行计数，运行结果确实比sorted函数快
+from collections import defaultdict
+class Solution(object):
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+
+        # 使用字典的解法
+        # 使用defaultdict是因为该函数可以在值为空的时候不报错而返回一个默认值
+        dict1 = defaultdict(int)
+        dict2 = defaultdict(int)
+        # 使用两个字典进行计数
+        for i in s:
+            dict1[i] += 1
+
+        for j in t:
+            dict2[j] += 1
+
+        if len(dict1) != len(dict2):
+            return False
+        else:
+            for n in dict1:
+                if dict1[n] != dict2.get(n):
+                    return False
+        return True
