@@ -20,7 +20,7 @@
 
 
 """
-# 先排序后比较
+# 先排序后比较,但是效果不理想，比较耗时
 class Solution(object):
     def isAnagram(self, s, t):
         """
