@@ -45,7 +45,7 @@ class Solution(object):
         """
 
         # 使用字典的解法
-        # 使用defaultdict是因为该函数可以在值为空的时候不报错而返回一个默认值
+        # 使用defaultdict是因为该函数可以当key不存在的时候不报错而返回一个默认值
         dict1 = defaultdict(int)
         dict2 = defaultdict(int)
         # 使用两个字典进行计数
